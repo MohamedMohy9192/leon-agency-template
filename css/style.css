@@ -1,5 +1,6 @@
 :root {
   --mainColor: #10cab7;
+  --secondaryColor: #2c4755;
 }
 * {
   box-sizing: border-box;
@@ -39,20 +40,19 @@ body {
 }
 
 .special-heading + p {
-
   margin-top: -30px;
   font-size: 20px;
   text-align: center;
   color: #797979;
 }
 
-@media(max-width: 767px){
+@media (max-width: 767px) {
   .special-heading {
-    font-size: 60px; 
-}
-.special-heading + p {
-  margin-top: -20px;
-}
+    font-size: 60px;
+  }
+  .special-heading + p {
+    margin-top: -20px;
+  }
 }
 header {
   padding: 20px;
@@ -202,8 +202,74 @@ main.landing {
 }
 
 /* Start Services*/
-.services{
+.services {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.services .services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-top: 100px;
+  gap: 30px;
+}
+
+.services .services-content .service {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .services .services-content .service {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.services .services-content .service i {
+  color: var(--mainColor);
+  flex-basis: 60px; /* width in flex-direction: row and hight in column direction */
+}
+.services .services-content .service .service-text {
+  flex: 1;
+}
+
+.services .services-content .service .service-text h3 {
+  margin-top: 0;
+}
+
+.services .services-content .service .service-text p {
+  color: #444;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.services .services-content .col .image {
+  text-align: center;
+  position: relative;
+}
+
+.services .services-content .col .image::before {
+  content: '';
+  position: absolute;
+  background-color: var(--secondaryColor);
+  right: 0;
+  width: 100px;
+  height: calc(100% + 100px);
+  top: -50px;
+ z-index: -1;
+}
+
+
+.services .services-content .col .image img {
+  width: 260px;
+ 
+}
+
+@media (max-width: 1199px){
+  .image-max-width{
+    display: none;
+  }
+
 }
 /* End Services*/
