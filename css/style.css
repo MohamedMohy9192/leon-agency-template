@@ -397,3 +397,58 @@ main.landing {
 }
 
 /* End About */
+
+/*Start Contact*/
+.contact {
+  padding-top: var(--sectionPadding);
+  padding-bottom: var(--sectionPadding);
+  background-color: var(--sectionBackgroundColor);
+}
+
+.contact .contact-info {
+  text-align: center;
+  margin-top: var(--topSectionContentMargin);
+}
+
+.contact .contact-info .contact-lable {
+  font-weight: 800;
+  color: var(--secondaryColor);
+  font-size: 30px;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+}
+
+.contact .contact-info .contact-mail {
+  font-weight: 800;
+  color: var(--mainColor);
+  text-decoration: none;
+  font-size: 30px;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .contact .contact-info .contact-mail,
+  .contact .contact-info .contact-lable {
+    font-size: 25px;
+  }
+}
+
+.contact .contact-info .contact-social {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+@media (max-width: 767px) {
+  .contact .contact-info .contact-social {
+    font-size: 15px;
+  }
+}
+
+.contact .contact-info .contact-social i {
+  margin-left: 10px;
+  color: var(--secondaryColor);
+}
+
+/*End Contact*/
