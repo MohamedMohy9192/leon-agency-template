@@ -8,6 +8,11 @@
 * {
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;  /* Make the scroll when select sections from
+  menu smooth*/
+}
+
 body {
   font-family: 'Work Sans', sans-serif;
 }
@@ -452,3 +457,19 @@ main.landing {
 }
 
 /*End Contact*/
+
+/*Start Footer*/
+.footer{
+  background-color: var(--secondaryColor);
+  color: white;
+ padding-top: 30px;
+ padding-bottom: 30px;
+ font-size: 18px;
+ text-align: center;
+}
+
+.footer span{
+  color: var(--mainColor);
+  font-weight: bold;
+}
+/*End Footer*/
